@@ -36,7 +36,7 @@ def main():
     }
 
     input_text = st.text_input("Enter your text", "")
-    input_prompt = create_prompt_with_chat_format([{"role": "user", "content": input_prompt}], add_bos=False)
+    input_prompt = create_prompt_with_chat_format([{"role": "user", "content": input_text}], add_bos=False)
     output = llm(input_prompt, **generation_kwargs)
 
     if st.button("Enter"):
