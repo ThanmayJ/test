@@ -1,3 +1,4 @@
+import streamlit as st
 from llama_cpp import Llama
 
 def create_prompt_with_chat_format(messages, bos="<s>", eos="</s>", add_bos=True):
@@ -19,8 +20,6 @@ def create_prompt_with_chat_format(messages, bos="<s>", eos="</s>", add_bos=True
     formatted_text = bos + formatted_text if add_bos else formatted_text
     return formatted_text
 
-import streamlit as st
-from llama_cpp import Llama
 
 def main():
     st.title("Chat Demo")
